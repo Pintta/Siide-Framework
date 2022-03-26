@@ -1,0 +1,20 @@
+<html>
+  <head>
+        <title>Revo Gaming Community</title><link rel="icon" href="logo-up.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .animate-bottom {position: relative;-webkit-animation-name: animatebottom;-webkit-animation-duration: 6s;animation-name: animatebottom;animation-duration: 8s}
+            @-webkit-keyframes animatebottom {from {bottom:-500px;opacity:0}to {bottom:0px;opacity:1}}
+            @keyframes animatebottom {from {bottom:-500px;opacity:0} to {bottom:0;opacity:1}}
+            .animate-bottom2 {position: relative;-webkit-animation-name: animatebottom2;-webkit-animation-duration: 6s;animation-name: animatebottom2;animation-duration: 18s}
+            #myDiv {display: none;text-align: center;}
+            #myDiv2 {display: none;text-align: center;}
+        </style>
+    </head>
+    <body onload="myFunction()" style="margin:0;background-color:rgb(36, 35, 35);" >
+        <div id="loader"></div>
+        <div style="display:none;" id="myDiv" class="animate-bottom"><img src = "logo-up.png" width="450" height="450"></a></div>
+        <script>var myVar;function myFunction() {myVar = setTimeout(showPage, 3000);}function showPage() {document.getElementById("myDiv").style.display = "block";}</script>
+    </body>
+    <audio src="musiikki.mp3" autoplay loop></audio>
+</html>
