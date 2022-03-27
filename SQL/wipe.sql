@@ -435,9 +435,6 @@ CREATE TABLE IF NOT EXISTS `whitelist` (
   UNIQUE KEY `identifier` (`license`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `permissions` (`id`, `name`, `steam`, `license`, `permission`) VALUES
-(54, 'natsu', 'steam:11000010f189745', 'license:a1dd6a2ae0dc68986d898df7ff85822c990bb9cb', 'god');
-
 CREATE TABLE IF NOT EXISTS `player_parking_vehicles` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
