@@ -9,4 +9,5 @@ Nor does this framework work with other scripts, as this is a truly peculiar ent
 If you would like to support the author, you can do so by contacting the discord: Tippe#1337
 
 https://docs.fivem.net/docs/server-manual/setting-up-a-server-vanilla/#windows
+
 https://docs.fivem.net/docs/server-manual/setting-up-a-server-vanilla/#linux
