@@ -455,7 +455,6 @@ CREATE TABLE IF NOT EXISTS `player_parking_vehicles` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
 CREATE TABLE IF NOT EXISTS `player_parking_vips` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
