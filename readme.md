@@ -27,3 +27,5 @@ Installation:
 https://docs.fivem.net/docs/server-manual/setting-up-a-server-vanilla/#windows
 
 https://docs.fivem.net/docs/server-manual/setting-up-a-server-vanilla/#linux
+
+If you want support: ETH -> 0xc892A3c2563D7830887146FbD14fE3b51C1FE597
