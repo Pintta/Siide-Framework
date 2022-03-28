@@ -6,7 +6,7 @@ When creating a character, you can choose for yourself: Male / Female / Binary.
 
 Nor does this framework work with other scripts, as this is a truly peculiar entity. This is developed entirely as student work by a college student
 
-If you would like to support the author, you can do so by contacting the discord: Tippe#1337
+If you would like to support the author, you can do so by contacting the discord: Tippe#1337`
 
 Installation:
 
