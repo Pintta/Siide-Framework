@@ -1,12 +1,12 @@
-DiscordWebhookSystemInfos	= 'https://discord.com/api/webhooks/935885475833585694/e1Ms8pP5kzb7pqLq7qpNi__Dsn6OzLB4ZvZWskh2w8su3Yv3kasqdO2PHR2y3UmODH0Z'
-DiscordWebhookStart			= 'https://discord.com/api/webhooks/935885475833585694/e1Ms8pP5kzb7pqLq7qpNi__Dsn6OzLB4ZvZWskh2w8su3Yv3kasqdO2PHR2y3UmODH0Z'
-DiscordWebhookKillinglogs	= 'https://discord.com/api/webhooks/935885475833585694/e1Ms8pP5kzb7pqLq7qpNi__Dsn6OzLB4ZvZWskh2w8su3Yv3kasqdO2PHR2y3UmODH0Z'
-DiscordWebhookChat			= 'https://discord.com/api/webhooks/935885475833585694/e1Ms8pP5kzb7pqLq7qpNi__Dsn6OzLB4ZvZWskh2w8su3Yv3kasqdO2PHR2y3UmODH0Z'
-DiscordWebhookCheat			= 'https://discord.com/api/webhooks/935885475833585694/e1Ms8pP5kzb7pqLq7qpNi__Dsn6OzLB4ZvZWskh2w8su3Yv3kasqdO2PHR2y3UmODH0Z'
+DiscordWebhookSystemInfos	= 'ChangeMe-LMAO'
+DiscordWebhookStart			= 'ChangeMe-LMAO'
+DiscordWebhookKillinglogs	= 'ChangeMe-LMAO'
+DiscordWebhookChat			= 'ChangeMe-LMAO'
+DiscordWebhookCheat			= 'ChangeMe-LMAO'
 
-SystemAvatar = 'https://flashingjungle.com/exhibitionism/-000//1/5c13ffc4ac091.jpg'
-UserAvatar = 'https://flashingjungle.com/exhibitionism/-000//1/5c13ffc4ac091.jpg'
-SystemName = 'Täti'
+SystemAvatar = 'ChangeMe-LMAO'
+UserAvatar = 'ChangeMe-LMAO'
+SystemName = 'ChangeMe-LMAO'
 
 SpecialCommands = {
 	{'/ooc', '**[OOC]:**'},
