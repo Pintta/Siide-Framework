@@ -29,3 +29,5 @@ https://docs.fivem.net/docs/server-manual/setting-up-a-server-vanilla/#linux
 If you would like to support the author, you can do so by contacting the discord: Pintta#1337
 
 If you want support this framework project: ETH -> 0xc892A3c2563D7830887146FbD14fE3b51C1FE597
+
+HOX! - You yourself remove the discord webhook. One package downloader, playing "world savior" - LMAO
