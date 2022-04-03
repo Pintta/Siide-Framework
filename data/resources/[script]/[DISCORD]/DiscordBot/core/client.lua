@@ -1,6 +1,5 @@
 Citizen.CreateThread(function()
 	local DeathReason, Killer, DeathCauseHash, Weapon
-
 	while true do
 		Citizen.Wait(0)
 		if IsEntityDead(PlayerPedId()) then
@@ -8,13 +7,11 @@ Citizen.CreateThread(function()
 			local PedKiller = GetPedSourceOfDeath(PlayerPedId())
 			DeathCauseHash = GetPedCauseOfDeath(PlayerPedId())
 			Weapon = WeaponNames[tostring(DeathCauseHash)]
-
 			if IsEntityAPed(PedKiller) and IsPedAPlayer(PedKiller) then
 				Killer = NetworkGetPlayerIndexFromPed(PedKiller)
 			elseif IsEntityAVehicle(PedKiller) and IsEntityAPed(GetPedInVehicleSeat(PedKiller, -1)) and IsPedAPlayer(GetPedInVehicleSeat(PedKiller, -1)) then
 				Killer = NetworkGetPlayerIndexFromPed(GetPedInVehicleSeat(PedKiller, -1))
 			end
-			
 			if (Killer == PlayerId()) then
 				DeathReason = 'KYS'
 			elseif (Killer == nil) then
@@ -52,7 +49,6 @@ Citizen.CreateThread(function()
 					DeathReason = 'à tué'
 				end
 			end
-			
 			if DeathReason == 'KYS' or DeathReason == 'jokin muu' then
 				TriggerServerEvent('DiscordBot:playerDied', GetPlayerName(PlayerId()) .. ' ' .. DeathReason .. '.', Weapon)
 			else
