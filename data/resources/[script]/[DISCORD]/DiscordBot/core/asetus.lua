@@ -1,12 +1,11 @@
-DiscordWebhookSystemInfos	= 'ChangeMe-LMAO'
+DiscordWebhookSystemInfos		= 'ChangeMe-LMAO'
 DiscordWebhookStart			= 'ChangeMe-LMAO'
-DiscordWebhookKillinglogs	= 'ChangeMe-LMAO'
+DiscordWebhookKillinglogs		= 'ChangeMe-LMAO'
 DiscordWebhookChat			= 'ChangeMe-LMAO'
 DiscordWebhookCheat			= 'ChangeMe-LMAO'
-
-SystemAvatar = 'ChangeMe-LMAO'
-UserAvatar = 'ChangeMe-LMAO'
-SystemName = 'ChangeMe-LMAO'
+SystemAvatar 				= 'ChangeMe-LMAO'
+UserAvatar 				= 'ChangeMe-LMAO'
+SystemName 				= 'ChangeMe-LMAO'
 
 SpecialCommands = {
 	{'/ooc', '**[OOC]:**'},
