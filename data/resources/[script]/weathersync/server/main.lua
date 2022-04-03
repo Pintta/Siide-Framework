@@ -18,7 +18,6 @@ AvailableWeatherTypes = {
 
 AvailableTimeTypes = 'NIGHT'
 
-
 RegisterServerEvent('weathersync:server:RequestStateSync')
 AddEventHandler('weathersync:server:RequestStateSync', function()
     TriggerClientEvent('weathersync:client:SyncWeather', -1, CurrentWeather, blackout)
