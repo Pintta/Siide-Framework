@@ -17,7 +17,6 @@ end)
 RegisterServerEvent('DiscordBot:playerDied')
 AddEventHandler('DiscordBot:playerDied', function(Message, Weapon)
 	local date = os.date('*t')
-	
 	if date.day < 10 then date.day = '0' .. tostring(date.day) end
 	if date.month < 10 then date.month = '0' .. tostring(date.month) end
 	if date.hour < 10 then date.hour = '0' .. tostring(date.hour) end
@@ -31,40 +30,30 @@ end)
 
 AddEventHandler('chatMessage', function(Source, Name, Message)
 	local Webhook = DiscordWebhookChat; TTS = false
-
 	for i = 0, 9 do
 		Message = Message:gsub('%^' .. i, '')
 		Name = Name:gsub('%^' .. i, '')
 	end
-	
 	MessageSplitted = stringsplit(Message, ' ')
-	
 	if not IsCommand(MessageSplitted, 'Blacklisted') then
 		if IsCommand(MessageSplitted, 'HavingOwnWebhook') then
 			Webhook = GetOwnWebhook(MessageSplitted)
 		end
-		
 		if IsCommand(MessageSplitted, 'Special') then
 			MessageSplitted = ReplaceSpecialCommand(MessageSplitted)
 		end
-		
 		if IsCommand(MessageSplitted, 'TTS') then
 			TTS = true
 		end
-		
 		Message = ''
-		
 		for Key, Value in ipairs(MessageSplitted) do
 			Message = Message .. Value .. ' '
 		end
-		
 		Message = Message:gsub('USERNAME_NEEDED_HERE', GetPlayerName(Source))
 		Message = Message:gsub('USERID_NEEDED_HERE', Source)
-		
 		if Name:len() > 23 then
 			Name = Name:sub(1, 23)
 		end
-
 		local AvatarURL = UserAvatar
 		if GetIDFromSource('steam', Source) then
 			PerformHttpRequest('http://steamcommunity.com/profiles/' .. tonumber(GetIDFromSource('steam', Source), 32) .. '/?xml=1', function(Error, Content, Head)
@@ -106,7 +95,6 @@ AddEventHandler('DiscordBot:ToDiscord', function(WebHook, Name, Message, Image, 
 			print('ToDiscord event called without a specified webhook!')
 			return nil
 		end
-
 		if Image:lower() == 'steam' then
 			Image = UserAvatar
 			local Source = source
