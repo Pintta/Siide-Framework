@@ -1,7 +1,9 @@
 ## Siide Framework v1.0 semi hc version - FULL SERVER
 
-This is a semi hc level role playing server framework. This is working, but there may be more bugs and more. 
-This is being developed and has already been developed for about a year. 
+This is a semi hc level role playing server framework. This is working, but there may be more bugs and more.
+
+This is being developed and has already been developed for about a year.
+
 Development of this Framework has begun in January 2021 and is continuing.
 
 When creating a character, you can choose for yourself: Male / Female / Binary.
