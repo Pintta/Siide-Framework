@@ -1,12 +1,9 @@
 local callChannel = 0
 
----function createPhoneThread
----creates a phone thread to listen for key presses
 local function createPhoneThread()
 	Citizen.CreateThread(function()
 		local changed = false
 		while callChannel ~= 0 do
-			-- check if they're pressing voice keybinds
 			if MumbleIsPlayerTalking(PlayerId()) and not changed then
 				changed = true
 				playerTargets(radioPressed and radioData or {}, callData)
@@ -66,9 +63,7 @@ function setCallChannel(channel)
 	TriggerServerEvent('pma-voice:setPlayerCall', channel)
 	callChannel = channel
 	if GetConvarInt('voice_enableUi', 1) == 1 then
-		SendNUIMessage({
-			callInfo = channel
-		})
+		SendNUIMessage({callInfo = channel})
 	end
 	createPhoneThread()
 end
@@ -82,6 +77,7 @@ exports('addPlayerToCall', function(_call)
 		setCallChannel(call)
 	end
 end)
+
 exports('removePlayerFromCall', function()
 	setCallChannel(0)
 end)
