@@ -1,6 +1,6 @@
 Cfg 			= {}
-voiceTarget 	= 1
-radioTarget 	= 2
+voiceTarget 		= 1
+radioTarget 		= 2
 callTarget 		= 3
 gameVersion		= GetGameName()
 
@@ -8,6 +8,7 @@ if not IsDuplicityVersion() then
 	LocalPlayer = LocalPlayer
 	playerServerId = GetPlayerServerId(PlayerId())
 end
+
 Player = Player
 Entity = Entity
 
@@ -52,7 +53,6 @@ function tPrint(tbl, indent)
 	for k, v in pairs(tbl) do
 		local tblType = type(v)
 		local formatting = string.rep("  ", indent) .. k .. ": "
-
 		if tblType == "table" then
 			print(formatting)
 			tPrint(v, indent + 1)
