@@ -32,4 +32,4 @@ https://docs.fivem.net/docs/server-manual/setting-up-a-server-vanilla/#linux
 
 If you would like to support the author, you can do so by contacting the discord: Pintta#0001
 
-HOX! - You yourself remove the discord webhook. One package downloader, playing "world savior" - LMAO
+HOX! - You yourself remove the discord webhook. One package downloader, playing "world savior" - LUL
