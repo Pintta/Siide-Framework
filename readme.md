@@ -1,4 +1,4 @@
-## Siide Framework v1.0 semi hc version - FULL SERVER
+## Siide Framework v1.0.1 semi hc version - FULL SERVER
 
 This is a semi hc level role playing server framework. This is working, but there may be more bugs and more.
 
