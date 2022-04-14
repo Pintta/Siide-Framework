@@ -6,7 +6,9 @@ This is being developed and has already been developed for about a year.
 
 Development of this Framework has begun in January 2021 and is continuing.
 
-When creating a character, you can choose for yourself: Male / Female / Binary.
+When creating a character , you can choose for yourself: Male / Female / Binary.
+
+Support latin multicharacter names.
 
 Nor does this framework work with other scripts, as this is a truly peculiar entity. This is developed entirely as student work by a college student
 
