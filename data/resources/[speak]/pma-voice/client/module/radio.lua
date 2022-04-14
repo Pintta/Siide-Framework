@@ -1,8 +1,5 @@
 local radioChannel = 0
 
---- event syncRadioData
---- syncs the current players on the radio to the client
----@param radioTable table the table of the current players on the radio
 function syncRadioData(radioTable)
 	radioData = radioTable
 	logger.info('[radio] Syncing radio table.')
@@ -19,20 +16,14 @@ function syncRadioData(radioTable)
 end
 RegisterNetEvent('pma-voice:syncRadioData', syncRadioData)
 
---- event setTalkingOnRadio
---- sets the players talking status, triggered when a player starts/stops talking.
----@param plySource number the players server id.
----@param enabled boolean whether the player is talking or not.
 function setTalkingOnRadio(plySource, enabled)
 	toggleVoice(plySource, enabled, 'radio')
 	radioData[plySource] = enabled
 	playMicClicks(enabled)
 end
+
 RegisterNetEvent('pma-voice:setTalkingOnRadio', setTalkingOnRadio)
 
---- event addPlayerToRadio
---- adds a player onto the radio.
----@param plySource number the players server id to add to the radio.
 function addPlayerToRadio(plySource)
 	radioData[plySource] = false
 	if radioPressed then
@@ -44,9 +35,6 @@ function addPlayerToRadio(plySource)
 end
 RegisterNetEvent('pma-voice:addPlayerToRadio', addPlayerToRadio)
 
---- event removePlayerFromRadio
---- removes the player (or self) from the radio
----@param plySource number the players server id to remove from the radio.
 function removePlayerFromRadio(plySource)
 	if plySource == playerServerId then
 		logger.info('[radio] Left radio %s, cleaning up.', radioChannel)
@@ -70,9 +58,6 @@ function removePlayerFromRadio(plySource)
 end
 RegisterNetEvent('pma-voice:removePlayerFromRadio', removePlayerFromRadio)
 
---- function setRadioChannel
---- sets the local players current radio channel and updates the server
----@param channel number the channel to set the player to, or 0 to remove them.
 function setRadioChannel(channel)
 	if GetConvarInt('voice_enableRadios', 1) ~= 1 then return end
 	TriggerServerEvent('pma-voice:setPlayerRadio', channel)
@@ -85,22 +70,13 @@ function setRadioChannel(channel)
 	end
 end
 
---- exports setRadioChannel
---- sets the local players current radio channel and updates the server
----@param channel number the channel to set the player to, or 0 to remove them.
 exports('setRadioChannel', setRadioChannel)
--- mumble-voip compatability
 exports('SetRadioChannel', setRadioChannel)
 
---- exports removePlayerFromRadio
---- sets the local players current radio channel and updates the server
 exports('removePlayerFromRadio', function()
 	setRadioChannel(0)
 end)
 
---- exports addPlayerToRadio
---- sets the local players current radio channel and updates the server
----@param radio number the channel to set the player to, or 0 to remove them.
 exports('addPlayerToRadio', function(_radio)
 	local radio = tonumber(_radio)
 	if radio then
@@ -108,9 +84,6 @@ exports('addPlayerToRadio', function(_radio)
 	end
 end)
 
---- check if the player is dead
---- seperating this so if people use different methods they can customize
---- it to their need as this will likely never be changed.
 function isDead()
 	if GetResourceState("pma-ambulance") ~= "missing" then
 		if LocalPlayer.state.isDead then
@@ -124,7 +97,6 @@ end
 RegisterCommand('+radiotalk', function()
 	if GetConvarInt('voice_enableRadios', 1) ~= 1 then return end
 	if isDead() then return end
-
 	if not radioPressed and radioEnabled then
 		if radioChannel > 0 then
 			logger.info('[radio] Start broadcasting, update targets and notify server.')
@@ -169,12 +141,10 @@ if gameVersion == 'fivem' then
 	RegisterKeyMapping('+radiotalk', 'Talk over Radio', 'keyboard', GetConvar('voice_defaultRadio', 'LMENU'))
 end
 
---- event syncRadio
---- syncs the players radio, only happens if the radio was set server side.
----@param _radioChannel number the radio channel to set the player to.
 function syncRadio(_radioChannel)
 	if GetConvarInt('voice_enableRadios', 1) ~= 1 then return end
 	logger.info('[radio] radio set serverside update to radio %s', radioChannel)
 	radioChannel = _radioChannel
 end
+
 RegisterNetEvent('pma-voice:clSetPlayerRadio', syncRadio)
