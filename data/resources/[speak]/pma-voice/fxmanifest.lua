@@ -1,41 +1,35 @@
 game 'gta5'
 fx_version 'cerulean'
-
-dependencies {
-   '/onesync',
-}
-
 lua54 'yes'
-
+dependency '/onesync'
 shared_script 'shared.lua'
+ui_page 'ui/index.html'
 
 client_scripts {
 	'client/init/proximity.lua',
 	'client/init/init.lua',
 	'client/init/main.lua',
 	'client/module/*.lua',
-    'client/*.lua',
+    	'client/*.lua',
 }
 
 server_scripts {
-    'server/**/*.lua',
+    	'server/**/*.lua',
 	'server/**/*.js'
 }
 
 files {
-    'ui/*.ogg',
-    'ui/css/*.css',
-    'ui/js/*.js',
-    'ui/index.html',
+    	'ui/*.ogg',
+    	'ui/css/*.css',
+    	'ui/js/*.js',
+    	'ui/index.html',
 }
-
-ui_page 'ui/index.html'
 
 provides {
 	'mumble-voip',
-    'tokovoip',
-    'toko-voip',
-    'tokovoip_script'
+    	'tokovoip',
+    	'toko-voip',
+    	'tokovoip_script'
 }
 
 convar_category 'PMA-Voice' {
