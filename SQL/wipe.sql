@@ -1,4 +1,4 @@
-/*Pintta Siide Framework 27.03.2022 https://github.com/Pintta/Siide-Framework*/
+/*Pintta Siide Framework 14.04.2022 https://github.com/Pintta/Siide-Framework*/
 
 CREATE DATABASE IF NOT EXISTS Malediivit DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE Malediivit;
@@ -462,4 +462,4 @@ CREATE TABLE IF NOT EXISTS `player_parking_vips` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-/*Pintta Siide Framework 27.03.2022 https://github.com/Pintta/Siide-Framework*/
+/*Pintta Siide Framework 14.04.2022 https://github.com/Pintta/Siide-Framework*/
